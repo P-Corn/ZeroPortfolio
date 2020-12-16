@@ -16,7 +16,7 @@
       LoadSections([
         'hero-alt',
         'gallery',
-        'newsletter',
+        // 'newsletter',
         'info-alt',
       ]),
     ],

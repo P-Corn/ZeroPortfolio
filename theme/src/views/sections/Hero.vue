@@ -25,13 +25,14 @@
             :class="$vuetify.breakpoint.smAndDown ? 'flex-column align-start' : 'align-center'"
             class="d-flex flex-wrap"
           >
-            <base-btn>
+            <base-btn to="about">
               Discover More
             </base-btn>
 
             <span class="font-weight-bold ml-6 mr-4 my-4">or</span>
 
             <base-btn
+              to="contact-us"
               :ripple="false"
               class="pa-1"
               height="auto"

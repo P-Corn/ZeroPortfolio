@@ -24,16 +24,18 @@
             cols="12"
             md="2"
           >
-            <base-btn
-              :block="$vuetify.breakpoint.smAndDown"
-              color="white"
-              href="mailto:shop@vuetifyjs.com?subject=Zero%20Theme%20Question"
-              large
-              outlined
-              target="_blank"
-            >
-              Contact Us
-            </base-btn>
+            <router-link to="contact-us">
+              <base-btn
+                :block="$vuetify.breakpoint.smAndDown"
+                color="white"
+                href=""
+                large
+                outlined
+                target="_blank"
+              >
+                Contact Us
+              </base-btn>
+            </router-link>
           </v-col>
         </v-row>
       </v-container>

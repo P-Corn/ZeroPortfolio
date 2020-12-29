@@ -71,10 +71,10 @@
       items: [
         'Home',
         'About',
-        'Marketing',
+        // 'Marketing',
         'Gallery',
-        'Pricing',
-        'News',
+        // 'Pricing',
+        // 'News',
         'Contact',
       ],
     }),

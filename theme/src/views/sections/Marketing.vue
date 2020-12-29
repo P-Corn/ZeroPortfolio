@@ -55,7 +55,10 @@
             a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores
           </base-body>
 
-          <base-btn class="mb-12">
+          <base-btn
+            to="about"
+            class="mb-12"
+          >
             Discover More
           </base-btn>
 

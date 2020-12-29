@@ -9,6 +9,8 @@
 
     <base-text-field label="Name" />
 
+    <base-text-field label="Company Name" />
+
     <base-text-field label="Email" />
 
     <base-text-field label="Subject" />
@@ -30,8 +32,17 @@
 </template>
 
 <script>
+
+import emailjs from 'emailjs-com';
+
   export default {
     name: 'BaseContactForm',
+
+    methods: {
+      sendEmail: (e) => {
+        emailjs.sendForm('contact_service', 'contact_form', e.target, 'user_WDObBAlbPYJe8ZiZ6VQ9w')
+      }
+    },
 
     // Injected from the Vuetify Themeable mixin
     inject: ['theme'],

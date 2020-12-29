@@ -20,13 +20,13 @@
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo pariatur quidem, quis modi iure nihil commodi suscipit, corporis dicta adipisci, voluptatum quia cupiditate. Nulla minus voluptatum nostrum deleniti, asperiores facere.
       </base-body>
 
-      <base-btn
+      <!-- <base-btn
         class="mb-12"
         color="white"
         outlined
       >
         More Info
-      </base-btn>
+      </base-btn> -->
     </div>
   </v-theme-provider>
 </template>

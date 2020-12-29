@@ -1,33 +1,35 @@
 <template>
   <div>
-    <base-info-card
+    <form name="contact-form" @sumbit.prevent="sendEmail">
+      <base-info-card
       :title="title"
       :subtitle="subtitle"
       space="4"
       color="primary"
-    />
+      />
 
-    <base-text-field label="Name" />
+      <base-text-field name="name" label="Name" />
 
-    <base-text-field label="Company Name" />
+      <base-text-field name="company_name" label="Company Name" />
 
-    <base-text-field label="Email" />
+      <base-text-field name="user_email" label="Email" />
 
-    <base-text-field label="Subject" />
+      <base-text-field name="subject" label="Subject" />
 
-    <base-textarea
-      class="mb-6"
-      label="Your Need & Description"
-    />
+      <base-textarea
+        name="message"
+        class="mb-6"
+        label="Your Need & Description"
+      />
 
-    <base-btn
-      :color="!theme.isDark ? 'accent' : 'white'"
-      href="mailto:shop@vuetifyjs.com?subject=Zero%20Theme%20Question"
-      outlined
-      target="_blank"
-    >
+      <base-btn
+        type="submit"
+        :color="!theme.isDark ? 'accent' : 'white'"
+        outlined
+      >
       Send message
-    </base-btn>
+      </base-btn>
+    </form>
   </div>
 </template>
 
@@ -39,8 +41,13 @@ import emailjs from 'emailjs-com';
     name: 'BaseContactForm',
 
     methods: {
-      sendEmail: (e) => {
+      sendEmail: e => {
         emailjs.sendForm('contact_service', 'contact_form', e.target, 'user_WDObBAlbPYJe8ZiZ6VQ9w')
+          .then((result) => {
+            console.log('SUCCESS!', result.status, result.text);
+          }, (error) => {
+            console.log('FAILED...', error);
+          });
       }
     },
 

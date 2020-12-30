@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form name="contact-form" @sumbit.prevent="sendEmail">
+    <form name="contact-form" @submit.prevent="sendEmail">
       <base-info-card
       :title="title"
       :subtitle="subtitle"

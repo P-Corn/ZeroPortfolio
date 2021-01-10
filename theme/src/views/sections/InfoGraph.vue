@@ -9,13 +9,13 @@
     >
       <v-row>
         <v-col
-          class="grey lighten-5 extra-padding"
+          class="accent extra-padding"
           cols="12"
-          md="4"
+          md="5"
         >
           <v-responsive
             class="mx-auto"
-            max-width="460"
+            max-width="550"
           >
             <base-info-card
               subtitle="Monthly Status"
@@ -23,7 +23,7 @@
               color="grey lighten-4"
             />
 
-            <base-body>
+            <base-body class="grey--text text--lighten-1">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, impedit hic, porro numquam ipsum iste, earum adipisci dignissimos sapiente cupiditate veritatis consequatur eaque culpa enim nesciunt esse tempora iusto in?
             </base-body>
 
@@ -33,8 +33,8 @@
 
         <v-col
           class="accent d-flex flex-wrap child-flex"
-          cols="12"
-          md="4"
+          cols="0"
+          md="0"
         >
           <v-sparkline
             :smooth="16"
@@ -47,11 +47,11 @@
         <v-col
           class="grey lighten-5 extra-padding"
           cols="12"
-          md="4"
+          md="7"
         >
           <v-responsive
             class="mx-auto"
-            max-width="460"
+            max-width="700"
           >
             <base-info-card
               subtitle="Our Stuff"

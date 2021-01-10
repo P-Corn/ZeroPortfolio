@@ -3,12 +3,12 @@
     <base-section
       id="social"
       class="accent text-center"
-      space="56"
+      space="8"
     >
-      <base-icon class="mb-8">
+      <base-icon class="mb-8 mt-4">
         mdi-twitter
       </base-icon>
-      <base-icon class="ml-3 mb-8">
+      <base-icon class="ml-3 mb-8 mt-4">
         mdi-instagram
       </base-icon>
 
@@ -20,7 +20,7 @@
       </base-section-heading>
 
       <v-btn
-        class="font-weight-bold mx-5"
+        class="font-weight-bold mx-5 mb-4"
         color="white"
         href="https://twitter.com/vuetifyjs"
         light
@@ -36,7 +36,7 @@
       </v-btn>
 
       <v-btn
-        class="font-weight-bold mx-5"
+        class="font-weight-bold mx-5 mb-4"
         color="white"
         href="https://twitter.com/vuetifyjs"
         light

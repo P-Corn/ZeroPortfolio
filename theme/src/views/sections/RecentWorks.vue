@@ -10,12 +10,12 @@
       <v-row justify="center">
         <v-theme-provider dark>
           <v-col
-            class="accent extra-padding"
+            class="grey darken-4 extra-padding"
             cols="12"
             md="4"
           >
             <v-responsive
-              class="mx-auto"
+              class="mx-auto py-md-14"
               max-width="460"
             >
               <base-subtitle
@@ -36,6 +36,10 @@
               <base-body :space="$vuetify.breakpoint.smAndDown ? 0 : undefined">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit obcaecati architecto adipisci ipsam dolore aut quisquam a hic corrupti. Autem natus explicabo doloribus?
               </base-body>
+
+              <base-btn>
+                View all works
+              </base-btn>
 
               <v-item-group
                 v-model="category"
@@ -96,13 +100,13 @@
     data: () => ({
       category: 'All',
       categories: [
-        'All',
-        'Wordpress',
-        'Branding',
-        'Statistics',
-        'Shopping',
-        'Photography',
-        'Ecommerce',
+        // 'All',
+        // 'Wordpress',
+        // 'Branding',
+        // 'Statistics',
+        // 'Shopping',
+        // 'Photography',
+        // 'Ecommerce',
       ],
     }),
 

@@ -78,8 +78,8 @@
 
     data: () => ({
       progress: [
-        ['Marketing', 90],
-        ['Graphic Design', 75],
+        ['JavaScript', 90],
+        ['Wix', 75],
         ['Wordpress', 60],
       ],
       value: [4, 2, 6, 10, 12, 8, 4, 12, 4, 2, 6, 10, 12, 8, 4, 12],

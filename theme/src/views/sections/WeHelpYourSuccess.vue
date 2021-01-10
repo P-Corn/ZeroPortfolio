@@ -9,12 +9,13 @@
     </base-section-heading>
 
     <v-container>
-      <v-row>
+      <v-row justify="center">
         <v-col
-          v-for="n in 4"
+          v-for="n in 2"
           :key="n"
           cols="6"
-          md="3"
+          md="6"
+          lg="3"
         >
           <v-hover>
             <template v-slot="{ hover }">

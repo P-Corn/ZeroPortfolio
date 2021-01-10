@@ -1,10 +1,14 @@
 <template>
   <base-section id="gallery">
-    <v-tabs
+
+  <!-- This is a tab to filter the different types of websites -->
+
+    <!-- <v-tabs
       v-model="tab"
       centered
       class="mb-12"
     >
+
       <v-tab
         v-for="(tab, i) in tabs"
         :key="i"
@@ -13,7 +17,7 @@
       >
         {{ tab }}
       </v-tab>
-    </v-tabs>
+    </v-tabs> -->
 
     <v-container>
       <v-fade-transition
@@ -51,13 +55,8 @@
 
     data: () => ({
       tab: 'All',
-      tabs: [
+      tabs: [ //These are the tabs for different type of websites
         'All',
-        'Wordpress',
-        'Branding',
-        'Statistics',
-        'Ecommerce',
-        'Photography',
       ],
     }),
 

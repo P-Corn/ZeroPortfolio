@@ -98,9 +98,7 @@
     data: () => ({
       icons: [
         'mdi-twitter',
-        'mdi-facebook',
-        'mdi-github',
-        'mdi-snapchat',
+        'mdi-instagram',
       ],
       info: [
         ['LIVE SITE', 'ZERO-THEME-PRO.JOHNLEIDER.COM'],

@@ -23,7 +23,7 @@
         'keep-in-touch',
         // 'newsletter',
         'social-media',
-        'info',
+        // 'info',
       ]),
     ],
 

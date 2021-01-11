@@ -1,0 +1,5 @@
+
+- Fix scrolling on recent works on Home page
+- Fix scrolling on related projects on individual project page
+- Change Gallery to "Projects"
+- Add some skills to the about page "Detailed Analysis Section"

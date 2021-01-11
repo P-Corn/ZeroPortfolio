@@ -50,7 +50,7 @@
                     :key="i"
                     :value="c"
                   >
-                    <v-btn
+                    <!-- <v-btn
                       :input-value="c === category"
                       class="justify-start mb-1"
                       color="grey lighten-1"
@@ -60,7 +60,7 @@
                       @click="c = category"
                     >
                       {{ c }}
-                    </v-btn>
+                    </v-btn> -->
                   </v-item>
 
                   <br

@@ -1,5 +1,8 @@
 <template>
+<div class="projects-container">
+  <!-- v-if Desktop show -->
   <v-slide-group
+    v-if="windowWidth > 600"
     :key="String(reset)"
     v-intersect.once="onObserve"
     v-bind="$attrs"
@@ -23,6 +26,40 @@
       </div>
     </v-slide-item>
   </v-slide-group>
+
+  <!-- v-if mobile then show -->
+  <v-carousel v-model="model" 
+    v-if="windowWidth <= 600"
+    :show-arrows="true"
+    hide-delimiters
+  >
+    <v-carousel-item
+      v-for="(card, i) in filtered"
+      :key="i"
+    >
+      <v-sheet
+        height="100%"
+        tile
+        color="#fafafa"
+      >
+        <v-row
+          class="fill-height"
+          align="center"
+          justify="center"
+        >
+          <project-card
+          height="400"
+          :src="require(`@/assets/project-${i + 1}.jpg`)"
+          v-bind="card"
+          class="mx-3 projectCard"
+        />
+
+        </v-row>
+      </v-sheet>
+    </v-carousel-item>
+  </v-carousel>
+  
+</div>
 </template>
 
 <script>
@@ -58,10 +95,11 @@
         { title: 'Miranda Shaffer', subtitle: 'Branding' },
         { title: 'Bradyn Kramer', subtitle: 'Photography' },
         { title: 'Bailey Wolfe', subtitle: 'Wordpress' },
-        { title: 'Lorelei Holloway', subtitle: 'Ecommerce' },
-        { title: 'Justine Elliott', subtitle: 'Ecommerce' },
       ],
       reset: false,
+      windowWidth: window.innerWidth,
+      mobile: null,
+      model: 0,
     }),
 
     computed: {
@@ -69,8 +107,19 @@
         return this.cards.filter(this.filter)
       },
     },
+    
+    created() {
+      window.addEventListener("resize", this.windowSize);
+    },
+
+    destroyed() {
+      window.removeEventListener("resize", this.windowSize);
+    },
 
     methods: {
+      windowSize() {
+          this.windowWidth = window.innerWidth
+      },
       onObserve (x, y, isVisible) {
         if (this.reset) return
 
@@ -85,3 +134,16 @@
     },
   }
 </script>
+
+<style lang='scss'>
+.projects-container{
+  width: 100%;
+}
+
+.projectCard {
+  width: 100%;
+  h3 {
+    color: green;
+  }
+}
+</style>
